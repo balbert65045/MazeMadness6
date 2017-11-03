@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class player : MonoBehaviour {
 
-
-    public Canvas canvas;
+    public int Player = 1;
 
     Rigidbody2D m_rigidbody;
 
@@ -29,13 +28,14 @@ public class player : MonoBehaviour {
     // Use this for initialization
     void Start () {
         m_rigidbody = GetComponent<Rigidbody2D>();
+      
        
     }
 	
 	// Update is called once per frame
 	void Update () {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Controller" + Player + "_L_Horizontal");
+        float v = Input.GetAxis("Controller" + Player + "_L_Vertical");
 
         Vector2 MoveForceDirection = new Vector2(h, v).normalized;
         Vector2 MoveForce = MoveForceDirection * MoveMagnitude;
@@ -44,18 +44,21 @@ public class player : MonoBehaviour {
        FindLookingDirection();
 
 
-       if (Input.GetAxis("Build") != 0)
+
+
+
+        if (Input.GetAxis("Controller" + Player + "_Build") != 0)
         {
             m_isAxisInUse = true;
-            
+
         }
-       else if (Input.GetAxis("Build") == 0)
+        else if (Input.GetAxis("Controller" + Player + "_Build") == 0)
         {
             m_isAxisInUse = false;
             BuildTrigger = true;
         }
 
-       if (m_isAxisInUse && BuildTrigger)
+        if (m_isAxisInUse && BuildTrigger)
         {
             if (TileOn.CheckBuild(CurrentlyFacing))
             {
@@ -71,8 +74,8 @@ public class player : MonoBehaviour {
 
     void FindLookingDirection()
     {
-        float x = Input.GetAxis("Mouse X");
-        float y = Input.GetAxis("Mouse Y");
+        float x = Input.GetAxis("Controller" + Player + "_R_Horizontal");
+        float y = Input.GetAxis("Controller" + Player + "_R_Vertical");
         if (Mathf.Abs(x) > Mathf.Abs(y))
         {
             if (x > 0.05)
