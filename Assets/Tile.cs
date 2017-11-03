@@ -9,50 +9,68 @@ public class Tile : MonoBehaviour {
     public Vector3 RightPosition { get { return (new Vector3(transform.position.x + 5f, transform.position.y, transform.position.z)); } }
     public Vector3 LeftPosition { get { return (new Vector3(transform.position.x - 5f, transform.position.y, transform.position.z)); } }
 
-    public bool WallUp = false;
-    public bool WallDown = false;
-    public bool WallRight = false;
-    public bool WallLeft = false;
+    public GameObject WallUp;
+    public GameObject WallDown;
+    public GameObject WallRight;
+    public GameObject WallLeft;
 
-    public bool CheckBuild(player.DirectionFacing playerdirection)
+    public bool CheckForTile(player.DirectionFacing playerdirection)
     {
         switch (playerdirection)
         {
             case player.DirectionFacing.Up:
-                if (WallUp) { return (false); }
-                else { return true; }
+                if (WallUp != null) { return (true); }
+                else { return false; }
             case player.DirectionFacing.Down:
-                if (WallDown) { return (false); }
-                else { return true; }
+                if (WallDown != null) { return (true); }
+                else { return false; }
             case player.DirectionFacing.Right:
-                if (WallRight) { return (false); }
-                else { return true; }
+                if (WallRight != null) { return (true); }
+                else { return false; }
             case player.DirectionFacing.Left:
-                if (WallLeft) { return (false); }
-                else { return true; }
+                if (WallLeft != null) { return (true); }
+                else { return false; }
         }
         return false;
     }
 
-    public void Build(player.DirectionFacing playerdirection)
+    public void Build(player.DirectionFacing playerdirection, GameObject wall)
     {
         switch (playerdirection)
         {
             case player.DirectionFacing.Up:
-                WallUp = true;
+                WallUp = wall;
                 break;
             case player.DirectionFacing.Down:
-                WallDown = true;
+                WallDown = wall;
                 break;
             case player.DirectionFacing.Right:
-                WallRight = true;
+                WallRight = wall;
                 break;
             case player.DirectionFacing.Left:
-                WallLeft = true;
+                WallLeft = wall;
                 break;
         }
     }
 
+    public void DestoryWall(player.DirectionFacing playerdirection)
+    {
+        switch (playerdirection)
+        {
+            case player.DirectionFacing.Up:
+                Destroy(WallUp);
+                break;
+            case player.DirectionFacing.Down:
+                Destroy(WallDown);
+                break;
+            case player.DirectionFacing.Right:
+                Destroy(WallRight);
+                break;
+            case player.DirectionFacing.Left:
+                Destroy(WallLeft);
+                break;
+        }
+    }
 
     private void OnDrawGizmos()
     {

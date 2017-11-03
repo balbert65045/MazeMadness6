@@ -7,7 +7,8 @@ public class player : MonoBehaviour {
 
     public int Player = 1;
 
-    Rigidbody2D m_rigidbody;
+    Slider DestroySlider;
+    public float DestroySpeed = 1f;
 
     public float MoveMagnitude = 10f;
 
@@ -18,6 +19,8 @@ public class player : MonoBehaviour {
     public GameObject Wall;
     private GameObject WallImageShown;
 
+    Rigidbody2D m_rigidbody;
+
     public enum DirectionFacing { Up, Right, Down, Left, }
     public DirectionFacing CurrentlyFacing = DirectionFacing.Left;
 
@@ -25,11 +28,17 @@ public class player : MonoBehaviour {
     private bool m_isAxisInUse = false;
     private bool BuildTrigger = false;
 
+    public bool DeathBox = false;
+
+
+    private PowerIndicator powerIndicator;
     // Use this for initialization
     void Start () {
         m_rigidbody = GetComponent<Rigidbody2D>();
-      
-       
+        powerIndicator = GetComponentInChildren<PowerIndicator>();
+        powerIndicator.gameObject.SetActive(false);
+        DestroySlider = GetComponentInChildren<Slider>();
+        DestroySlider.gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -44,10 +53,40 @@ public class player : MonoBehaviour {
        FindLookingDirection();
 
 
+        if (Input.GetAxis("Controller" + Player + "_Destroy") != 0)
+        {
+            if (TileOn.CheckForTile(CurrentlyFacing))
+            {
+                DestroySlider.gameObject.SetActive(true);
+                DestroySlider.value += Time.deltaTime * DestroySpeed;
+                if (DestroySlider.value >= 1)
+                {
+                    TileOn.DestoryWall(CurrentlyFacing);
+                    DestroySlider.value = 0;
+                    DestroySlider.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                if (DestroySlider.gameObject != null)
+                {
+                    DestroySlider.value = 0;
+                    DestroySlider.gameObject.SetActive(false);
+                }
+            }
+        }
+        else if (Input.GetAxis("Controller" + Player + "_Destroy") == 0)
+        {
+            if (DestroySlider.gameObject != null)
+            {
+                DestroySlider.value = 0;
+                DestroySlider.gameObject.SetActive(false);
+            }
+        }
 
 
 
-        if (Input.GetAxis("Controller" + Player + "_Build") != 0)
+            if (Input.GetAxis("Controller" + Player + "_Build") != 0)
         {
             m_isAxisInUse = true;
 
@@ -60,10 +99,10 @@ public class player : MonoBehaviour {
 
         if (m_isAxisInUse && BuildTrigger)
         {
-            if (TileOn.CheckBuild(CurrentlyFacing))
+            if (!TileOn.CheckForTile(CurrentlyFacing))
             {
-                Instantiate(Wall, WallImageShown.transform.position, WallImageShown.transform.rotation);
-                TileOn.Build(CurrentlyFacing);
+                GameObject tileWall = Instantiate(Wall, WallImageShown.transform.position, WallImageShown.transform.rotation);
+                TileOn.Build(CurrentlyFacing, tileWall);
                 BuildTrigger = false;
             }
         }
@@ -107,8 +146,30 @@ public class player : MonoBehaviour {
     }
 
 
+    public void Dead()
+    {
+        Destroy(WallImageShown);
+        Destroy(this.gameObject);
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (DeathBox)
+        {
+            if (collision.gameObject.GetComponent<player>())
+            {
+                collision.gameObject.GetComponent<player>().Dead();
+            }
+        }
+
+        if (collision.gameObject.GetComponent<DeathBlock>())
+        {
+            Destroy(collision.gameObject);
+            DeathBox = true;
+            powerIndicator.gameObject.SetActive(true);
+        }
+
         Debug.Log("CollisionMade");
     }
 
