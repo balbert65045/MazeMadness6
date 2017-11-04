@@ -35,10 +35,7 @@ public class LevelManager : MonoBehaviour {
                 BuildTimeActive = false;
 
                 // Spawn a block
-                int TotalBlocks = tiles.Length;
-                int RandomBlock = Random.Range(0, TotalBlocks);
-                Vector3 BlockPosition = tiles[RandomBlock].transform.position;
-                Instantiate(deathBlock, BlockPosition, Quaternion.identity);
+                SpawnNewDeathBox();
 
                 // Deactivatebuild
                 foreach (player P in players)
@@ -48,4 +45,12 @@ public class LevelManager : MonoBehaviour {
             }
         }
 	}
+
+    public void SpawnNewDeathBox()
+    {
+        int TotalBlocks = tiles.Length;
+        int RandomBlock = Random.Range(0, TotalBlocks);
+        Vector3 BlockPosition = tiles[RandomBlock].transform.position;
+        Instantiate(deathBlock, BlockPosition, Quaternion.identity);
+    }
 }

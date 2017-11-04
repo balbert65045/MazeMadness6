@@ -34,6 +34,7 @@ public class player : MonoBehaviour {
     private float DeathTimeDuration;
     public GameObject DeathboxUI;
 
+    LevelManager levelManager;
 
     private PowerIndicator powerIndicator;
     // Use this for initialization
@@ -54,6 +55,7 @@ public class player : MonoBehaviour {
 
     void Start () {
         m_rigidbody = GetComponent<Rigidbody2D>();
+        levelManager = FindObjectOfType<LevelManager>();
         powerIndicator = GetComponentInChildren<PowerIndicator>();
         powerIndicator.gameObject.SetActive(false);
         DestroySlider = GetComponentInChildren<Slider>();
@@ -73,7 +75,7 @@ public class player : MonoBehaviour {
 
         m_rigidbody.AddForce(MoveForce);
         FindLookingDirection();
-        ChecktoDestroy();
+         { ChecktoDestroy(); }
         if (BuildEnable) { ChecktoBuild(); }
 
         if (DeathBox)
@@ -85,6 +87,7 @@ public class player : MonoBehaviour {
                 DeathBox = false;
                 powerIndicator.gameObject.SetActive(false);
                 DeathboxUI.gameObject.SetActive(false);
+                levelManager.SpawnNewDeathBox();
             }
         }
 
