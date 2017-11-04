@@ -29,6 +29,9 @@ public class player : MonoBehaviour {
     private bool BuildTrigger = false;
 
     public bool DeathBox = false;
+    private float DeathTime;
+    private float DeathTimeDuration;
+    public GameObject DeathboxUI;
 
 
     private PowerIndicator powerIndicator;
@@ -39,10 +42,12 @@ public class player : MonoBehaviour {
         powerIndicator.gameObject.SetActive(false);
         DestroySlider = GetComponentInChildren<Slider>();
         DestroySlider.gameObject.SetActive(false);
+        DeathboxUI.SetActive(false);
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         float h = Input.GetAxis("Controller" + Player + "_L_Horizontal");
         float v = Input.GetAxis("Controller" + Player + "_L_Vertical");
 
@@ -50,9 +55,51 @@ public class player : MonoBehaviour {
         Vector2 MoveForce = MoveForceDirection * MoveMagnitude;
 
         m_rigidbody.AddForce(MoveForce);
-       FindLookingDirection();
+        FindLookingDirection();
+        ChecktoDestroy();
+        ChecktoBuild();
+
+        if (DeathBox)
+        {
+            float Value = (DeathTime - Time.time) / DeathTimeDuration;
+            DeathboxUI.GetComponentInChildren<Slider>().value = Value;
+            if (Time.time > DeathTime)
+            {
+                DeathBox = false;
+                powerIndicator.gameObject.SetActive(false);
+                DeathboxUI.gameObject.SetActive(false);
+            }
+        }
 
 
+    }
+
+    private void ChecktoBuild()
+    {
+        if (Input.GetAxis("Controller" + Player + "_Build") != 0)
+        {
+            m_isAxisInUse = true;
+
+        }
+        else if (Input.GetAxis("Controller" + Player + "_Build") == 0)
+        {
+            m_isAxisInUse = false;
+            BuildTrigger = true;
+        }
+
+        if (m_isAxisInUse && BuildTrigger)
+        {
+            if (!TileOn.CheckForTile(CurrentlyFacing))
+            {
+                GameObject tileWall = Instantiate(Wall, WallImageShown.transform.position, WallImageShown.transform.rotation);
+                TileOn.Build(CurrentlyFacing, tileWall);
+                BuildTrigger = false;
+            }
+        }
+    }
+
+    private void ChecktoDestroy()
+    {
         if (Input.GetAxis("Controller" + Player + "_Destroy") != 0)
         {
             if (TileOn.CheckForTile(CurrentlyFacing))
@@ -83,33 +130,7 @@ public class player : MonoBehaviour {
                 DestroySlider.gameObject.SetActive(false);
             }
         }
-
-
-
-            if (Input.GetAxis("Controller" + Player + "_Build") != 0)
-        {
-            m_isAxisInUse = true;
-
-        }
-        else if (Input.GetAxis("Controller" + Player + "_Build") == 0)
-        {
-            m_isAxisInUse = false;
-            BuildTrigger = true;
-        }
-
-        if (m_isAxisInUse && BuildTrigger)
-        {
-            if (!TileOn.CheckForTile(CurrentlyFacing))
-            {
-                GameObject tileWall = Instantiate(Wall, WallImageShown.transform.position, WallImageShown.transform.rotation);
-                TileOn.Build(CurrentlyFacing, tileWall);
-                BuildTrigger = false;
-            }
-        }
-
-
     }
-
 
     void FindLookingDirection()
     {
@@ -165,9 +186,12 @@ public class player : MonoBehaviour {
 
         if (collision.gameObject.GetComponent<DeathBlock>())
         {
-            Destroy(collision.gameObject);
+            DeathTimeDuration = collision.gameObject.GetComponent<DeathBlock>().DeathTime;
+            DeathTime = Time.time + DeathTimeDuration;
             DeathBox = true;
             powerIndicator.gameObject.SetActive(true);
+            DeathboxUI.SetActive(true);
+            Destroy(collision.gameObject);
         }
 
         Debug.Log("CollisionMade");

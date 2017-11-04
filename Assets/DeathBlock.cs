@@ -5,6 +5,7 @@ using UnityEngine;
 public class DeathBlock : MonoBehaviour {
 
 	// Use this for initialization
+    public float DeathTime = 10f;
 	void Start () {
 		
 	}
