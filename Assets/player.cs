@@ -25,7 +25,8 @@ public class player : MonoBehaviour {
     public DirectionFacing CurrentlyFacing = DirectionFacing.Left;
 
 
-    private bool m_isAxisInUse = false;
+    private bool BuildEnable = true;
+    public bool m_isAxisInUse = false;
     private bool BuildTrigger = false;
 
     public bool DeathBox = false;
@@ -36,6 +37,21 @@ public class player : MonoBehaviour {
 
     private PowerIndicator powerIndicator;
     // Use this for initialization
+
+    public void Dead()
+    {
+        Destroy(WallImageShown);
+        Destroy(this.gameObject);
+    }
+
+    public void deActiveBuild()
+    {
+        Destroy(WallImageShown);
+        BuildEnable = false;
+    }
+
+
+
     void Start () {
         m_rigidbody = GetComponent<Rigidbody2D>();
         powerIndicator = GetComponentInChildren<PowerIndicator>();
@@ -43,6 +59,7 @@ public class player : MonoBehaviour {
         DestroySlider = GetComponentInChildren<Slider>();
         DestroySlider.gameObject.SetActive(false);
         DeathboxUI.SetActive(false);
+        BuildEnable = true;
     }
 	
 	// Update is called once per frame
@@ -57,7 +74,7 @@ public class player : MonoBehaviour {
         m_rigidbody.AddForce(MoveForce);
         FindLookingDirection();
         ChecktoDestroy();
-        ChecktoBuild();
+        if (BuildEnable) { ChecktoBuild(); }
 
         if (DeathBox)
         {
@@ -159,7 +176,7 @@ public class player : MonoBehaviour {
             }
         }
 
-        if (WallImageShown != null)
+        if (WallImageShown != null )
         {
             PositionImage();
         }
@@ -167,11 +184,9 @@ public class player : MonoBehaviour {
     }
 
 
-    public void Dead()
-    {
-        Destroy(WallImageShown);
-        Destroy(this.gameObject);
-    }
+
+
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -205,7 +220,7 @@ public class player : MonoBehaviour {
 
             if (WallImageShown == null)
             {
-                WallImageShown = Instantiate(WallImage, TileOn.LeftPosition, Quaternion.Euler(Vector3.zero));
+                if (BuildEnable) { WallImageShown = Instantiate(WallImage, TileOn.LeftPosition, Quaternion.Euler(Vector3.zero)); }
             }
             else
             {
