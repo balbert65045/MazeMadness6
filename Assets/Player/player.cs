@@ -11,6 +11,7 @@ public class player : MonoBehaviour {
     public float DestroySpeed = 1f;
 
     public float MoveMagnitude = 10f;
+    public float DeathCubeIncreaseSpeed = 100;
 
     public Tile TileOn;
 
@@ -30,11 +31,8 @@ public class player : MonoBehaviour {
     private bool BuildTrigger = false;
 
     public bool DeathBox = false;
-    private float DeathTime;
-    private float DeathTimeDuration;
-    public GameObject DeathboxUI;
 
-    LevelManager levelManager;
+    BattleManager battleManager;
 
     private PowerIndicator powerIndicator;
     // Use this for initialization
@@ -43,6 +41,7 @@ public class player : MonoBehaviour {
     {
         Destroy(WallImageShown);
         Destroy(this.gameObject);
+        battleManager.CheckForWin(this);
     }
 
     public void deActiveBuild()
@@ -51,16 +50,20 @@ public class player : MonoBehaviour {
         BuildEnable = false;
     }
 
+    public void DisableDeathPowers()
+    {
+        DeathBox = false;
+        powerIndicator.gameObject.SetActive(false);
+    }
 
 
     void Start () {
         m_rigidbody = GetComponent<Rigidbody2D>();
-        levelManager = FindObjectOfType<LevelManager>();
+        battleManager = FindObjectOfType<BattleManager>();
         powerIndicator = GetComponentInChildren<PowerIndicator>();
         powerIndicator.gameObject.SetActive(false);
         DestroySlider = GetComponentInChildren<Slider>();
         DestroySlider.gameObject.SetActive(false);
-        DeathboxUI.SetActive(false);
         BuildEnable = true;
     }
 	
@@ -71,27 +74,14 @@ public class player : MonoBehaviour {
         float v = Input.GetAxis("Controller" + Player + "_L_Vertical");
 
         Vector2 MoveForceDirection = new Vector2(h, v).normalized;
-        Vector2 MoveForce = MoveForceDirection * MoveMagnitude;
+        Vector2 MoveForce;
+        if (DeathBox) { MoveForce = MoveForceDirection * (MoveMagnitude + DeathCubeIncreaseSpeed); }
+        else { MoveForce = MoveForceDirection * MoveMagnitude; }
 
         m_rigidbody.AddForce(MoveForce);
         FindLookingDirection();
-         { ChecktoDestroy(); }
+        if (DeathBox) { ChecktoDestroy(); }
         if (BuildEnable) { ChecktoBuild(); }
-
-        if (DeathBox)
-        {
-            float Value = (DeathTime - Time.time) / DeathTimeDuration;
-            DeathboxUI.GetComponentInChildren<Slider>().value = Value;
-            if (Time.time > DeathTime)
-            {
-                DeathBox = false;
-                powerIndicator.gameObject.SetActive(false);
-                DeathboxUI.gameObject.SetActive(false);
-                levelManager.SpawnNewDeathBox();
-            }
-        }
-
-
     }
 
     private void ChecktoBuild()
@@ -204,11 +194,9 @@ public class player : MonoBehaviour {
 
         if (collision.gameObject.GetComponent<DeathBlock>())
         {
-            DeathTimeDuration = collision.gameObject.GetComponent<DeathBlock>().DeathTime;
-            DeathTime = Time.time + DeathTimeDuration;
+            battleManager.StartDeathTimer(collision.gameObject.GetComponent<DeathBlock>().DeathTime);
             DeathBox = true;
             powerIndicator.gameObject.SetActive(true);
-            DeathboxUI.SetActive(true);
             Destroy(collision.gameObject);
         }
 

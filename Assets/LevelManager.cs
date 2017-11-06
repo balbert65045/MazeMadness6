@@ -1,56 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
     // Use this for initialization
 
-    player[] players;
-    Tile[] tiles;
-    public GameObject buildUI;
-    public GameObject deathBlock;
-    public float BuildTime = 10f;
-    private float BuildTimeOver;
-    bool BuildTimeActive = true;
 
-	void Start () {
-        players = FindObjectsOfType<player>();
-        tiles = FindObjectsOfType<Tile>();
-        BuildTimeOver = Time.time + BuildTime;
-        BuildTimeActive = true;
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		if (BuildTimeActive)
-        {
-            buildUI.GetComponentInChildren<Text>().text = ((int)(BuildTimeOver- Time.time)).ToString();
+    public float autoLoadNextLevelAfter;
 
-            if (Time.time > BuildTimeOver)
-            {
-                // Disable the UI
-                buildUI.SetActive(false);
-                BuildTimeActive = false;
-
-                // Spawn a block
-                SpawnNewDeathBox();
-
-                // Deactivatebuild
-                foreach (player P in players)
-                {
-                    P.deActiveBuild();
-                }
-            }
-        }
-	}
-
-    public void SpawnNewDeathBox()
+    void Start()
     {
-        int TotalBlocks = tiles.Length;
-        int RandomBlock = Random.Range(0, TotalBlocks);
-        Vector3 BlockPosition = tiles[RandomBlock].transform.position;
-        Instantiate(deathBlock, BlockPosition, Quaternion.identity);
+        if (autoLoadNextLevelAfter <= 0)
+        {
+            Debug.Log("Auto Load Disabled, use a positive number in seconds");
+        } else
+        {
+            Invoke("LoadNextLevel", autoLoadNextLevelAfter);
+        }
     }
+
+
+	public void LoadLevel(string name)
+    {
+        SceneManager.LoadScene(name);
+        Debug.Log("Level load requested for: " + name);
+    }
+
+    public void QuitRequest()
+    {
+       Application.Quit();
+        Debug.Log("Quit Game");
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
 }
