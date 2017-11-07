@@ -40,6 +40,7 @@ public class player : MonoBehaviour {
     public void Dead()
     {
         Destroy(WallImageShown);
+        FindObjectOfType<playersShownUI>().PlayerDead(Player);
         Destroy(this.gameObject);
         battleManager.CheckForWin(this);
     }
