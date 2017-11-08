@@ -56,23 +56,7 @@ public class BattleManager : MonoBehaviour {
 	void Update () {
         if (startScreen.gameObject.activeSelf)
         {
-            startScreen.CountdownText.text = ((int)(CountdownTime - (Time.time - CountdownStart))).ToString();
-
-            if (Time.time - CountdownStart > CountdownTime)
-            {
-                startScreen.gameObject.SetActive(false);
-                BuildTimeOver = Time.time + BuildTime;
-                buildUI.SetActive(true);
-                foreach (player P in playersAlive)
-                {
-                    P.unFreeze();
-                }
-
-            }
-            else if (Time.time - CountdownStart + 1 > CountdownTime)
-            {
-                startScreen.TitleText.text = "GO!";
-            }
+            StartCoroutine(StartCountDown());
         }
 
 
@@ -80,23 +64,7 @@ public class BattleManager : MonoBehaviour {
         {
             if (BuildTimeActive)
             {
-                buildUI.GetComponentInChildren<Text>().text = ((int)(BuildTimeOver - Time.time)).ToString();
-
-                if (Time.time > BuildTimeOver)
-                {
-                    // Disable the UI
-                    buildUI.SetActive(false);
-                    BuildTimeActive = false;
-
-                    // Spawn a block
-                    SpawnNewDeathBox();
-
-                    // Deactivatebuild
-                    foreach (player P in players)
-                    {
-                        P.deActiveBuild();
-                    }
-                }
+                StartCoroutine(BuildTimeCountDown());
             }
 
             if (DeathTimeActive)
@@ -116,6 +84,59 @@ public class BattleManager : MonoBehaviour {
             }
         }
 	}
+
+    //IEnumerator DeathTimeCountDown()
+    //{
+
+    //}
+
+
+    IEnumerator BuildTimeCountDown()
+    {
+        buildUI.GetComponentInChildren<Text>().text = ((int)(BuildTimeOver - Time.time)).ToString();
+        if (Time.time > BuildTimeOver)
+        {
+            // Disable the UI
+            buildUI.SetActive(false);
+            BuildTimeActive = false;
+
+            // Spawn a block
+            SpawnNewDeathBox();
+
+            // Deactivatebuild
+            foreach (player P in players)
+            {
+                P.deActiveBuild();
+            }
+        }
+        yield return new WaitForSeconds(.9f);
+
+    }
+
+
+        IEnumerator StartCountDown()
+    {
+        startScreen.CountdownText.text = ((int)(CountdownTime - (Time.time - CountdownStart))).ToString();
+        yield return new WaitForSeconds(.9f);
+        if (Time.time - CountdownStart > CountdownTime)
+        {
+            startScreen.gameObject.SetActive(false);
+            BuildTimeOver = Time.time + BuildTime;
+            buildUI.SetActive(true);
+            foreach (player P in playersAlive)
+            {
+                P.unFreeze();
+            }
+        }
+        else if (Time.time - CountdownStart + 1 > CountdownTime)
+        {
+            startScreen.TitleText.text = "GO!";
+        }
+
+    }
+
+
+
 
     public void SpawnNewDeathBox()
     {
