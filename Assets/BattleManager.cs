@@ -10,8 +10,10 @@ public class BattleManager : MonoBehaviour {
     player[] players;
     List<player> playersAlive = new List<player>();
     Tile[] tiles;
+
     public GameObject buildUI;
     public GameObject WinScreen;
+    StartScreen startScreen;
 
     public GameObject deathBlock;
     private float DeathTime;
@@ -24,56 +26,93 @@ public class BattleManager : MonoBehaviour {
     private float BuildTimeOver;
     bool BuildTimeActive = true;
 
-	void Start () {
+    public float CountdownTime = 6f;
+    float CountdownStart;
+
+
+    void Start () {
         Time.timeScale = 1;
+
         players = FindObjectsOfType<player>();
+        startScreen = FindObjectOfType<StartScreen>();
         foreach (player P in players)
         {
             playersAlive.Add(P);
+            P.Freeze();
         }
         tiles = FindObjectsOfType<Tile>();
-        BuildTimeOver = Time.time + BuildTime;
         BuildTimeActive = true;
         DeathboxUI.SetActive(false);
         WinScreen.SetActive(false);
+        buildUI.SetActive(false);
+
+
+        CountdownStart = Time.time;
+        startScreen.CountdownText.text = ((int)CountdownTime).ToString();
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (BuildTimeActive)
+        if (startScreen.gameObject.activeSelf)
         {
-            buildUI.GetComponentInChildren<Text>().text = ((int)(BuildTimeOver- Time.time)).ToString();
+            startScreen.CountdownText.text = ((int)(CountdownTime - (Time.time - CountdownStart))).ToString();
 
-            if (Time.time > BuildTimeOver)
+            if (Time.time - CountdownStart > CountdownTime)
             {
-                // Disable the UI
-                buildUI.SetActive(false);
-                BuildTimeActive = false;
-
-                // Spawn a block
-                SpawnNewDeathBox();
-
-                // Deactivatebuild
-                foreach (player P in players)
+                startScreen.gameObject.SetActive(false);
+                BuildTimeOver = Time.time + BuildTime;
+                buildUI.SetActive(true);
+                foreach (player P in playersAlive)
                 {
-                    P.deActiveBuild();
+                    P.unFreeze();
                 }
+
+            }
+            else if (Time.time - CountdownStart + 1 > CountdownTime)
+            {
+                startScreen.TitleText.text = "GO!";
             }
         }
 
-        if (DeathTimeActive)
+
+        else
         {
-            float Value = (DeathTime - Time.time) / DeathTimeDuration;
-            DeathboxUI.GetComponentInChildren<Slider>().value = Value;
-            if (Time.time > DeathTime)
+            if (BuildTimeActive)
             {
-                foreach (player P in players)
+                buildUI.GetComponentInChildren<Text>().text = ((int)(BuildTimeOver - Time.time)).ToString();
+
+                if (Time.time > BuildTimeOver)
                 {
-                    P.DisableDeathPowers();
+                    // Disable the UI
+                    buildUI.SetActive(false);
+                    BuildTimeActive = false;
+
+                    // Spawn a block
+                    SpawnNewDeathBox();
+
+                    // Deactivatebuild
+                    foreach (player P in players)
+                    {
+                        P.deActiveBuild();
+                    }
                 }
-                DeathboxUI.gameObject.SetActive(false);
-                SpawnNewDeathBox();
-                DeathTimeActive = false;
+            }
+
+            if (DeathTimeActive)
+            {
+                float Value = (DeathTime - Time.time) / DeathTimeDuration;
+                DeathboxUI.GetComponentInChildren<Slider>().value = Value;
+                if (Time.time > DeathTime)
+                {
+                    foreach (player P in players)
+                    {
+                        P.DisableDeathPowers();
+                    }
+                    DeathboxUI.gameObject.SetActive(false);
+                    SpawnNewDeathBox();
+                    DeathTimeActive = false;
+                }
             }
         }
 	}

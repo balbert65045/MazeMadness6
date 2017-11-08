@@ -13,7 +13,7 @@ public class DirectionalBox : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	public void ChangeDirectionPosition () {
 		if (player.CurrentlyFacing == player.DirectionFacing.Right)
         {
             transform.position = player.transform.position + Vector3.right * 4;

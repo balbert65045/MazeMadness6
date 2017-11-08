@@ -13,6 +13,11 @@ public class player : MonoBehaviour {
     public float MoveMagnitude = 10f;
     public float DeathCubeIncreaseSpeed = 100;
 
+    public float boostSpeed = 10;
+    public float BoostTimer = 1f;
+    private bool boostAvailable = true;
+    private float lastBoostTime;
+
     public Tile TileOn;
 
     public GameObject enviroment;
@@ -31,11 +36,22 @@ public class player : MonoBehaviour {
     private bool BuildTrigger = false;
 
     public bool DeathBox = false;
-
+    
     BattleManager battleManager;
 
     private PowerIndicator powerIndicator;
     // Use this for initialization
+
+    public void Freeze()
+    {
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+    }
+
+    public void unFreeze()
+    {
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
 
     public void Dead()
     {
@@ -83,6 +99,25 @@ public class player : MonoBehaviour {
         FindLookingDirection();
         if (DeathBox) { ChecktoDestroy(); }
         if (BuildEnable) { ChecktoBuild(); }
+
+
+        if (boostAvailable)
+        {
+            if (Input.GetButtonDown("Controller" + Player + "_Dash"))
+            {
+                m_rigidbody.AddForce(MoveForceDirection * boostSpeed, ForceMode2D.Impulse);
+                boostAvailable = false;
+                lastBoostTime = Time.time;
+            }
+        }
+        else
+        {
+            if (Time.time > lastBoostTime + BoostTimer)
+            {
+                boostAvailable = true;
+            }
+        }
+
     }
 
     private void ChecktoBuild()
@@ -152,10 +187,12 @@ public class player : MonoBehaviour {
             if (x > 0.05)
             {
                 CurrentlyFacing = DirectionFacing.Right;
+                BroadcastMessage("ChangeDirectionPosition");
             }
             else if (x < -0.05)
             {
                 CurrentlyFacing = DirectionFacing.Left;
+                BroadcastMessage("ChangeDirectionPosition");
             }
         }
         else if ((Mathf.Abs(x) < Mathf.Abs(y)))
@@ -163,10 +200,12 @@ public class player : MonoBehaviour {
             if (y > 0.05)
             {
                 CurrentlyFacing = DirectionFacing.Up;
+                BroadcastMessage("ChangeDirectionPosition");
             }
             else if (y < -0.05)
             {
                 CurrentlyFacing = DirectionFacing.Down;
+                BroadcastMessage("ChangeDirectionPosition");
             }
         }
 
