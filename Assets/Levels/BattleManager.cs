@@ -19,8 +19,10 @@ public class BattleManager : MonoBehaviour {
     private float DeathTime;
     private float DeathTimeDuration;
     private bool DeathTimeActive = false;
-    public GameObject DeathboxUI;
 
+    public GameObject DeathboxUI;
+    private Slider DeathSlider;
+    private Text DeathResetTimer;
 
     public float BuildTime = 10f;
     private float BuildTimeOver;
@@ -29,6 +31,9 @@ public class BattleManager : MonoBehaviour {
     public float CountdownTime = 6f;
     float CountdownStart;
 
+    public float DeathTimeReset;
+    private float DeathBlockSpawnTime;
+    GameObject deathBlockOut;
 
     void Start () {
         Time.timeScale = 1;
@@ -42,6 +47,11 @@ public class BattleManager : MonoBehaviour {
         }
         tiles = FindObjectsOfType<Tile>();
         BuildTimeActive = true;
+
+        DeathSlider = DeathboxUI.GetComponentInChildren<Slider>();
+        DeathResetTimer = DeathboxUI.GetComponentInChildren<Text>();
+
+        DeathSlider.gameObject.SetActive(false);
         DeathboxUI.SetActive(false);
         WinScreen.SetActive(false);
         buildUI.SetActive(false);
@@ -77,9 +87,20 @@ public class BattleManager : MonoBehaviour {
                     {
                         P.DisableDeathPowers();
                     }
-                    DeathboxUI.gameObject.SetActive(false);
+                    DeathSlider.gameObject.SetActive(false);
+                    DeathResetTimer.gameObject.SetActive(true);
                     SpawnNewDeathBox();
                     DeathTimeActive = false;
+                }
+            }
+
+            if (deathBlockOut != null)
+            {
+                DeathResetTimer.text = ((int)(DeathBlockSpawnTime + DeathTimeReset - Time.time)).ToString();
+                if (Time.time > DeathBlockSpawnTime + DeathTimeReset)
+                {
+                    Destroy(deathBlockOut);
+                    SpawnNewDeathBox();
                 }
             }
         }
@@ -102,7 +123,7 @@ public class BattleManager : MonoBehaviour {
 
             // Spawn a block
             SpawnNewDeathBox();
-
+            DeathboxUI.SetActive(true);
             // Deactivatebuild
             foreach (player P in players)
             {
@@ -143,7 +164,8 @@ public class BattleManager : MonoBehaviour {
         int TotalBlocks = tiles.Length;
         int RandomBlock = Random.Range(0, TotalBlocks);
         Vector3 BlockPosition = tiles[RandomBlock].transform.position;
-        Instantiate(deathBlock, BlockPosition, Quaternion.identity);
+        deathBlockOut = Instantiate(deathBlock, BlockPosition, Quaternion.identity);
+        DeathBlockSpawnTime = Time.time;
     }
 
     public void StartDeathTimer(float newDeathTime)
@@ -151,7 +173,8 @@ public class BattleManager : MonoBehaviour {
         DeathTimeDuration = newDeathTime;
         DeathTime = Time.time + DeathTimeDuration;
         DeathTimeActive = true;
-        DeathboxUI.SetActive(true);
+        DeathSlider.gameObject.SetActive(true);
+        DeathResetTimer.gameObject.SetActive(false);
 
     }
 
@@ -170,3 +193,4 @@ public class BattleManager : MonoBehaviour {
        
     }
 }
+

@@ -98,6 +98,8 @@ public class player : MonoBehaviour {
         m_rigidbody.AddForce(MoveForce);
         FindLookingDirection();
         if (DeathBox) { ChecktoDestroy(); }
+        else { if (DestroySlider.gameObject.activeSelf) { DestroySlider.gameObject.SetActive(false); } }
+            
         if (BuildEnable) { ChecktoBuild(); }
 
 
