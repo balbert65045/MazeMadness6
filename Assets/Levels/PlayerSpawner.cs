@@ -31,6 +31,16 @@ public class PlayerSpawner : MonoBehaviour {
                 GameObject P2 = Instantiate(Player2, SpawnPositionPlayer2.position, Quaternion.identity);
                 P2.transform.SetParent(this.transform);
             }
+            else if (PA.playerNumber == 3)
+            {
+                GameObject P3 = Instantiate(Player3, SpawnPositionPlayer3.position, Quaternion.identity);
+                P3.transform.SetParent(this.transform);
+            }
+            else if (PA.playerNumber == 4)
+            {
+                GameObject P4 = Instantiate(Player4, SpawnPositionPlayer4.position, Quaternion.identity);
+                P4.transform.SetParent(this.transform);
+            }
         }
 
     }
