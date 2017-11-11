@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class BattleManager : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class BattleManager : MonoBehaviour {
 
     public GameObject buildUI;
     public GameObject WinScreen;
+    public GameObject PauseScreen;
+
     StartScreen startScreen;
 
     public GameObject deathBlock;
@@ -24,16 +27,18 @@ public class BattleManager : MonoBehaviour {
     private Slider DeathSlider;
     private Text DeathResetTimer;
 
-    public float BuildTime = 10f;
+    private float BuildTime = 10f;
     private float BuildTimeOver;
     bool BuildTimeActive = true;
 
     public float CountdownTime = 6f;
     float CountdownStart;
 
-    public float DeathTimeReset;
+    private float DeathTimeReset;
     private float DeathBlockSpawnTime;
     GameObject deathBlockOut;
+
+    GameObject EventSystem;
 
     void Start () {
         Time.timeScale = 1;
@@ -48,6 +53,10 @@ public class BattleManager : MonoBehaviour {
         tiles = FindObjectsOfType<Tile>();
         BuildTimeActive = true;
 
+
+        EventSystem = FindObjectOfType<EventSystem>().gameObject;
+        EventSystem.SetActive(false);
+
         DeathSlider = DeathboxUI.GetComponentInChildren<Slider>();
         DeathResetTimer = DeathboxUI.GetComponentInChildren<Text>();
 
@@ -55,15 +64,29 @@ public class BattleManager : MonoBehaviour {
         DeathboxUI.SetActive(false);
         WinScreen.SetActive(false);
         buildUI.SetActive(false);
+        PauseScreen.SetActive(false);
 
 
         CountdownStart = Time.time;
         startScreen.CountdownText.text = ((int)CountdownTime).ToString();
 
+
+        BuildTime = PlayerPrefsManager.GetBuildTimer();
+        DeathTimeDuration = PlayerPrefsManager.GetDeathDuration();
+        DeathTimeReset = PlayerPrefsManager.GetDeathReset();
+
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (Input.GetButtonDown("Pause"))
+        {
+            Pause();
+        }
+
+
         if (startScreen.gameObject.activeSelf)
         {
             StartCoroutine(StartCountDown());
@@ -106,10 +129,6 @@ public class BattleManager : MonoBehaviour {
         }
 	}
 
-    //IEnumerator DeathTimeCountDown()
-    //{
-
-    //}
 
 
     IEnumerator BuildTimeCountDown()
@@ -168,9 +187,8 @@ public class BattleManager : MonoBehaviour {
         DeathBlockSpawnTime = Time.time;
     }
 
-    public void StartDeathTimer(float newDeathTime)
+    public void StartDeathTimer()
     {
-        DeathTimeDuration = newDeathTime;
         DeathTime = Time.time + DeathTimeDuration;
         DeathTimeActive = true;
         DeathSlider.gameObject.SetActive(true);
@@ -185,12 +203,35 @@ public class BattleManager : MonoBehaviour {
         if (playersAlive.Count <= 1)
         {
             Time.timeScale = 0;
+            EventSystem.SetActive(true);
             WinScreen.SetActive(true);
             WinScreen winScreen = WinScreen.GetComponent<WinScreen>();
             winScreen.ShowWinText(playersAlive[0].Player);
+            Button[] buttons = WinScreen.GetComponentsInChildren<Button>();
+            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(buttons[0].gameObject);
+
         }
 
        
     }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        PauseScreen.SetActive(false);
+        EventSystem.SetActive(false);
+    }
+
+    void Pause()
+    {
+        PauseScreen.SetActive(true);
+        Button[] buttons = PauseScreen.GetComponentsInChildren<Button>();
+        Time.timeScale = 0;
+        EventSystem.SetActive(true);
+        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(buttons[0].gameObject);
+        
+       
+    }
+
 }
 

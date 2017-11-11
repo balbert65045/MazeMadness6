@@ -1,0 +1,1406 @@
+Mono path[0] = 'C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/MazeMadness_Data/Managed'
+Mono path[1] = 'C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/MazeMadness_Data/Mono'
+Mono config path = 'C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/MazeMadness_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/MazeMadness_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55055
+Multi-casting "[IP] 10.0.0.7 [Port] 55055 [Flags] 2 [Guid] 425834849 [EditorId] 263532781 [Version] 1048832 [Id] WindowsPlayer(THE_BA_Machine) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55055]
+PlayerConnection already initialized - listening to [0.0.0.0:55055]
+Player data archive not found at `C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/MazeMadness_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 750 (ID=0x1381)
+    Vendor:   NVIDIA
+    VRAM:     994 MB
+    Driver:   22.21.13.8205
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.030 seconds
+Platform assembly: C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\MazeMadness_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.340459 ms
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Setting up 3 worker threads for Enlighten.
+  Thread -> id: 960 -> priority: 1 
+  Thread -> id: 1f5c -> priority: 1 
+  Thread -> id: 2c08 -> priority: 1 
+Level load requested for: PlayerJoin
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:LoadLevel(String) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:27)
+UnityEngine.Events.InvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:189)
+UnityEngine.Events.CachedInvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:309)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnSubmit(BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:49)
+UnityEngine.EventSystems.ExecuteEvents:Execute(ISubmitHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:127)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:SendSubmitEventToSelectedObject() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:330)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:181)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 27)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.836287 ms
+System memory in use before: 17.2 MB.
+System memory in use after: 17.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 361.
+Total: 0.413031 ms (FindLiveObjects: 0.034370 ms CreateObjectMapping: 0.022137 ms MarkObjects: 0.333221 ms  DeleteObjects: 0.020389 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Joystick connected ("Controller (XBOX 360 For Windows)").
+ 
+(Filename: C:/buildslave/unity/build/PlatformDependent/Win/Input/RawInput.cpp Line: 1351)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.779167 ms
+System memory in use before: 17.2 MB.
+System memory in use after: 17.2 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 654.
+Total: 0.705765 ms (FindLiveObjects: 0.053303 ms CreateObjectMapping: 0.031457 ms MarkObjects: 0.604983 ms  DeleteObjects: 0.015146 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Level load requested for: Small_Map
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:LoadLevel(String) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:27)
+LevelSetUp:SaveandContinue() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\LevelSetUp.cs:75)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:154)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnSubmit(BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:49)
+UnityEngine.EventSystems.ExecuteEvents:Execute(ISubmitHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:127)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:SendSubmitEventToSelectedObject() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:330)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:181)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 27)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.003160 ms
+System memory in use before: 17.7 MB.
+System memory in use after: 17.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1530.
+Total: 0.741301 ms (FindLiveObjects: 0.112433 ms CreateObjectMapping: 0.049517 ms MarkObjects: 0.542941 ms  DeleteObjects: 0.033788 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Level load requested for: _Start
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:LoadLevel(String) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:27)
+UnityEngine.Events.InvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:189)
+UnityEngine.Events.CachedInvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:309)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnSubmit(BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:49)
+UnityEngine.EventSystems.ExecuteEvents:Execute(ISubmitHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:127)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:SendSubmitEventToSelectedObject() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:330)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:181)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 27)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.746034 ms
+System memory in use before: 17.8 MB.
+System memory in use after: 17.8 MB.
+
+Unloading 190 unused Assets to reduce memory usage. Loaded Objects now: 310.
+Total: 0.541485 ms (FindLiveObjects: 0.035827 ms CreateObjectMapping: 0.028253 ms MarkObjects: 0.309336 ms  DeleteObjects: 0.166319 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Level load requested for: PlayerJoin
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:LoadLevel(String) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:27)
+UnityEngine.Events.InvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:189)
+UnityEngine.Events.CachedInvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:309)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnSubmit(BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:49)
+UnityEngine.EventSystems.ExecuteEvents:Execute(ISubmitHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:127)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:SendSubmitEventToSelectedObject() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:330)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:181)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 27)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.627703 ms
+System memory in use before: 17.7 MB.
+System memory in use after: 17.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 368.
+Total: 0.403128 ms (FindLiveObjects: 0.031457 ms CreateObjectMapping: 0.019515 ms MarkObjects: 0.328852 ms  DeleteObjects: 0.021263 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.617508 ms
+System memory in use before: 17.6 MB.
+System memory in use after: 17.7 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 655.
+Total: 0.611391 ms (FindLiveObjects: 0.051264 ms CreateObjectMapping: 0.025923 ms MarkObjects: 0.519930 ms  DeleteObjects: 0.013107 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Level load requested for: Small_Map
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:LoadLevel(String) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:27)
+LevelSetUp:SaveandContinue() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\LevelSetUp.cs:75)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:154)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnSubmit(BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:49)
+UnityEngine.EventSystems.ExecuteEvents:Execute(ISubmitHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:127)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:SendSubmitEventToSelectedObject() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:330)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:181)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 27)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.094912 ms
+System memory in use before: 18.0 MB.
+System memory in use after: 18.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1530.
+Total: 0.787323 ms (FindLiveObjects: 0.111850 ms CreateObjectMapping: 0.053595 ms MarkObjects: 0.591293 ms  DeleteObjects: 0.029127 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Level load requested for: _Start
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:LoadLevel(String) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:27)
+UnityEngine.Events.InvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:189)
+UnityEngine.Events.CachedInvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:309)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnSubmit(BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:49)
+UnityEngine.EventSystems.ExecuteEvents:Execute(ISubmitHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:127)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:SendSubmitEventToSelectedObject() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:330)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:181)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 27)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.901460 ms
+System memory in use before: 17.8 MB.
+System memory in use after: 17.8 MB.
+
+Unloading 190 unused Assets to reduce memory usage. Loaded Objects now: 310.
+Total: 0.418857 ms (FindLiveObjects: 0.039905 ms CreateObjectMapping: 0.023010 ms MarkObjects: 0.221662 ms  DeleteObjects: 0.132822 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Level load requested for: PlayerJoin
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:LoadLevel(String) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:27)
+UnityEngine.Events.InvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:189)
+UnityEngine.Events.CachedInvokableCall`1:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:309)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnSubmit(BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:49)
+UnityEngine.EventSystems.ExecuteEvents:Execute(ISubmitHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:127)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:SendSubmitEventToSelectedObject() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:330)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:181)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 27)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.590419 ms
+System memory in use before: 17.7 MB.
+System memory in use after: 17.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 368.
+Total: 0.540320 ms (FindLiveObjects: 0.093500 ms CreateObjectMapping: 0.023884 ms MarkObjects: 0.398467 ms  DeleteObjects: 0.022428 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.552845 ms
+System memory in use before: 17.6 MB.
+System memory in use after: 17.7 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 655.
+Total: 0.839171 ms (FindLiveObjects: 0.054468 ms CreateObjectMapping: 0.031166 ms MarkObjects: 0.734893 ms  DeleteObjects: 0.016602 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Level load requested for: Medium_Map
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:LoadLevel(String) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:27)
+LevelSetUp:SaveandContinue() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\LevelSetUp.cs:75)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:154)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnSubmit(BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:49)
+UnityEngine.EventSystems.ExecuteEvents:Execute(ISubmitHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:127)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:SendSubmitEventToSelectedObject() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:330)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:181)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 27)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.037822 ms
+System memory in use before: 18.8 MB.
+System memory in use after: 18.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3235.
+Total: 1.224240 ms (FindLiveObjects: 0.248459 ms CreateObjectMapping: 0.051847 ms MarkObjects: 0.890144 ms  DeleteObjects: 0.032040 ms)
+
+Auto Load Disabled, use a positive number in seconds
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+LevelManager:Start() (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Levels\LevelManager.cs:16)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Levels/LevelManager.cs Line: 16)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+
+Triggered
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+player:OnTriggerEnter2D(Collider2D) (at C:\Users\Ben\Documents\Unity\Repos\MazeMadness6\Assets\Players\player.cs:280)
+ 
+(Filename: C:/Users/Ben/Documents/Unity/Repos/MazeMadness6/Assets/Players/player.cs Line: 280)
+

@@ -19,11 +19,49 @@ public class LevelSetUp : MonoBehaviour {
 
     void Start () {
         levelManager = FindObjectOfType<LevelManager>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+
+        int BuildTime = PlayerPrefsManager.GetBuildTimer();
+
+        for (int i = 0; i < BuildTimerDropDown.options.Count; i++)
+        {
+            if (BuildTimerDropDown.options[i].text == BuildTime.ToString())
+            {
+                BuildTimerDropDown.value = i;
+            }
+        }
+
+        int DeathDuration = PlayerPrefsManager.GetDeathDuration();
+
+        for (int i = 0; i < DeathDurationDropDown.options.Count; i++)
+        {
+            if (DeathDurationDropDown.options[i].text == DeathDuration.ToString())
+            {
+                DeathDurationDropDown.value = i;
+            }
+        }
+
+        int DeathReset = PlayerPrefsManager.GetDeathReset();
+
+        for (int i = 0; i < DeathResetDropDown.options.Count; i++)
+        {
+            if (DeathResetDropDown.options[i].text == DeathReset.ToString())
+            {
+                DeathResetDropDown.value = i;
+            }
+        }
+
+        int Boost = PlayerPrefsManager.GetBoost();
+        BoostDropDown.value = Boost;
+
+        int EveryoneCanDestroy = PlayerPrefsManager.GetEveryoneDestroy();
+        EveryoneDestroyDropDown.value = EveryoneCanDestroy;
+
+
+
+
     }
+	
     
     public void SaveandContinue()
     {

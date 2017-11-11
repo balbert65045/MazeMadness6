@@ -33,21 +33,49 @@ public class PlayerPrefsManager : MonoBehaviour {
     {
         PlayerPrefs.SetInt(BUILD_TIMER_KEY, time);
     }
+    public static int GetBuildTimer()
+    {
+        return(PlayerPrefs.GetInt(BUILD_TIMER_KEY));
+    }
+
+
     public static void SetDeathDuration(int time)
     {
         PlayerPrefs.SetInt(DEATH_DURATION_KEY, time);
     }
+    public static int GetDeathDuration()
+    {
+        return(PlayerPrefs.GetInt(DEATH_DURATION_KEY));
+    }
+
+
     public static void SetDeathReset(int time)
     {
         PlayerPrefs.SetInt(DEATH_RESET_KEY, time);
     }
+    public static int GetDeathReset()
+    {
+        return (PlayerPrefs.GetInt(DEATH_RESET_KEY));
+    }
+
+
     public static void SetBoost(int active)
     {
         PlayerPrefs.SetInt(BOOST_KEY, active);
     }
+    public static int GetBoost()
+    {
+        return (PlayerPrefs.GetInt(BOOST_KEY));
+    }
+
+
     public static void SetEveryoneDestroy(int active)
     {
         PlayerPrefs.SetInt(EVERYONE_DESTROY_KEY, active);
+    }
+    public static int GetEveryoneDestroy()
+    {
+        return (PlayerPrefs.GetInt(EVERYONE_DESTROY_KEY));
     }
 
 

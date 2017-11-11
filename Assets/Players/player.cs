@@ -9,6 +9,7 @@ public class player : MonoBehaviour {
 
     Slider DestroySlider;
     public float DestroySpeed = 1f;
+    private bool EDestroy;
 
     public float MoveMagnitude = 10f;
     public float DeathCubeIncreaseSpeed = 100;
@@ -17,6 +18,7 @@ public class player : MonoBehaviour {
     public float BoostTimer = 1f;
     private bool boostAvailable = true;
     private float lastBoostTime;
+    private bool boostAllowed;
 
     public Tile TileOn;
 
@@ -40,6 +42,7 @@ public class player : MonoBehaviour {
     BattleManager battleManager;
 
     private PowerIndicator powerIndicator;
+    Vector2 MoveForceDirection;
     // Use this for initialization
 
     public void Freeze()
@@ -82,28 +85,41 @@ public class player : MonoBehaviour {
         DestroySlider = GetComponentInChildren<Slider>();
         DestroySlider.gameObject.SetActive(false);
         BuildEnable = true;
+
+        if (PlayerPrefsManager.GetBoost() == 0)
+        {
+            boostAllowed = false;
+        }
+        else
+        {
+            boostAllowed = true;
+        }
+
+        if (PlayerPrefsManager.GetEveryoneDestroy() == 0)
+        {
+            EDestroy = false;
+        }
+        else
+        {
+            EDestroy = true;
+        }
+
+
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        float h = Input.GetAxis("Controller" + Player + "_L_Horizontal");
-        float v = Input.GetAxis("Controller" + Player + "_L_Vertical");
-
-        Vector2 MoveForceDirection = new Vector2(h, v).normalized;
-        Vector2 MoveForce;
-        if (DeathBox) { MoveForce = MoveForceDirection * (MoveMagnitude + DeathCubeIncreaseSpeed); }
-        else { MoveForce = MoveForceDirection * MoveMagnitude; }
-
-        m_rigidbody.AddForce(MoveForce);
         FindLookingDirection();
-        if (DeathBox) { ChecktoDestroy(); }
+
+        if (EDestroy) { ChecktoDestroy(); }
+        else if (DeathBox) { ChecktoDestroy(); }
         else { if (DestroySlider.gameObject.activeSelf) { DestroySlider.gameObject.SetActive(false); } }
             
         if (BuildEnable) { ChecktoBuild(); }
 
 
-        if (boostAvailable)
+        if (boostAvailable && boostAllowed)
         {
             if (Input.GetButtonDown("Controller" + Player + "_Dash"))
             {
@@ -120,6 +136,21 @@ public class player : MonoBehaviour {
             }
         }
 
+    }
+
+
+    private void FixedUpdate()
+    {
+
+        float h = Input.GetAxis("Controller" + Player + "_L_Horizontal");
+        float v = Input.GetAxis("Controller" + Player + "_L_Vertical");
+
+        MoveForceDirection = new Vector2(h, v).normalized;
+        Vector2 MoveForce;
+        if (DeathBox) { MoveForce = MoveForceDirection * (MoveMagnitude + DeathCubeIncreaseSpeed); }
+        else { MoveForce = MoveForceDirection * MoveMagnitude; }
+
+        m_rigidbody.AddForce(MoveForce);
     }
 
     private void ChecktoBuild()
@@ -236,17 +267,17 @@ public class player : MonoBehaviour {
 
         if (collision.gameObject.GetComponent<DeathBlock>())
         {
-            battleManager.StartDeathTimer(collision.gameObject.GetComponent<DeathBlock>().DeathTime);
+            battleManager.StartDeathTimer();
             DeathBox = true;
             powerIndicator.gameObject.SetActive(true);
             Destroy(collision.gameObject);
         }
 
-        Debug.Log("CollisionMade");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Triggered");
         if (collision.gameObject.GetComponent<Tile>())
         {
             TileOn = collision.gameObject.GetComponent<Tile>();
