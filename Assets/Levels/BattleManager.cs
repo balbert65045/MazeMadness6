@@ -106,7 +106,8 @@ public class BattleManager : MonoBehaviour {
                 DeathboxUI.GetComponentInChildren<Slider>().value = Value;
                 if (Time.time > DeathTime)
                 {
-                    foreach (player P in players)
+                    player[] playersA = FindObjectsOfType<player>();
+                    foreach (player P in playersA)
                     {
                         P.DisableDeathPowers();
                     }
